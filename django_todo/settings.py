@@ -25,12 +25,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-l0rvrl0^l0(5cd#q$-10cg^v!d@u^bih4_8y2+znssz3fwv!e@'
+SECRET_KEY = os.environ.get(
+    
+    'SECRET_KEY', 'django-insecure-l0rvrl0^l0(5cd#q$-10cg^v!d@u^bih4_8y2+znssz3fwv!e@')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['lista-de-tarefas-6dfff1bd6d6e.herokuapp.com']
+[os.environ.get(HEROKU_HOSTNAME')]ALLOWED_HOSTS = ['lista-de-tarefas-6dfff1bd6d6e.herokuapp.com']
 
 
 # Application definition
@@ -87,8 +89,7 @@ WSGI_APPLICATION = 'django_todo.wsgi.application'
 # }
 
 
-DATABASES = {
-    'default': dj_database_url.parse('postgres://vpktbdbj:kVb2XA5nNKRrw4x6agFcWJl6nDr3Ox3h@flora.db.elephantsql.com/vpktbdbj')
+DATA'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))    'default': dj_database_url.parse('postgres://vpktbdbj:kVb2XA5nNKRrw4x6agFcWJl6nDr3Ox3h@flora.db.elephantsql.com/vpktbdbj')
 }
 
 
