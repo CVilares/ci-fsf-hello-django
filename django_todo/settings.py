@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-l0rvrl0^l0(5cd#q$-10cg^v!d@u^bih4_8y2+znssz3fwv!e@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-cvilares-ci-fsf-hello-dj-ne7yco9ds8.us2.codeanyapp.com']
+ALLOWED_HOSTS = ['lista-de-tarefas-6dfff1bd6d6e.herokuapp.com']
 
 
 # Application definition
@@ -88,10 +88,8 @@ WSGI_APPLICATION = 'django_todo.wsgi.application'
 
 
 DATABASES = {
-   'default': dj_database_url.parse('postgres://vpktbdbj:kVb2XA5nNKRrw4x6agFcWJl6nDr3Ox3h@flora.db.elephantsql.com/vpktbdbj')
+    'default': dj_database_url.parse('postgres://vpktbdbj:kVb2XA5nNKRrw4x6agFcWJl6nDr3Ox3h@flora.db.elephantsql.com/vpktbdbj')
 }
-
-
 
 
 # Password validation
